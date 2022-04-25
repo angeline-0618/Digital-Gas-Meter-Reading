@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="keywords" content="PETROS, digital meter reading, Petroleum">
+	<meta name="description" content="Digital Meter Reading">
+	<meta name="author" content="Angeline">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Digital Meter Reading</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="navbar">
+		<img src="images/logo-petros.png" id="logo" alt="logo">
+		<a href="index.html">Home</a>
+		<a class="active" href="login.html">Login</a>
+		<a href="register.html">Sign Up</a>
+	</div>
+	
+	<div class="role-select">
+		<div class="role-admin">
+			<a href="#" onclick="document.getElementById('login').style.display='block'"><img src="images/role-icon.png" width="50%" alt="role icon"><span class="caption">Admin</span></a>
+		</div>
+		
+		<div class="role-customer">
+			<a href="customer_login.html" onclick="document.getElementById('login').style.display='block'"><img src="images/role-icon.png" width="50%" alt="role icon"><span class="caption">Customer</span></a>
+		</div>
+	</div>
+	
+	<!-- the login form will pop up -->
+	<div id="login" class="modal">
+		<form class="modal-content animate" action="action_page.php" method="post">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+				<img src="images/avatar-icon.png" class="avatar" alt="avatar" width="40%">
+			</div>
+
+			<div class="modal-container">
+				<label for="username"><b>Username</b></label>
+				<input type="text" placeholder="Enter Username" name="username" required>
+
+				<label for="password"><b>Password</b></label>
+				<input type="password" placeholder="Enter Password" name="password" required>
+
+				<button type="submit">Login</button>
+				<label>
+					<input type="checkbox" checked="checked" name="remember">Remember me
+				</label>
+			</div>
+
+			<div class="modal-container">
+				<button type="button" onclick="document.getElementById('login').style.display='none'" class="cancel_btn">Cancel</button>
+				<span class="password">Forgot <a href="#">password?</a></span>
+			</div>
+		</form>
+	</div>
+	
+	<script>
+		// Get the modal
+		var modal = document.getElementById('admin_login');
+		
+		// Close the modal when user clicks anywhere outside of the modal
+		window.onclick = function(event) {
+			if(event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+</body>
+	
+<footer>
+	<div class="footerbar">
+		<a href="https://www.petroleumsarawak.com/e">Petros Official Website</a>
+		<a href="feedback.html">Feedback</a>
+		<a href="about.html">About</a>
+		<a href="contact.hmtl">Contact</a>
+	</div>
+</footer>
+</html>
