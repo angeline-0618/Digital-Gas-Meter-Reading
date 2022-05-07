@@ -42,11 +42,10 @@ session_start();
 				<a href="logout.php">Logout</a>	
 			</div>
 		</div>
-		<a class="active" href="index.php">Home</a>
+		<a href="index.php">Home</a>
 	</div>
 	
-	<a href="logout.php">Logout</a>
-	<p>Hello, <?php echo $user; ?></p>
+    <h1>Meter Reader</h1>
 </body>
 	
 <footer>

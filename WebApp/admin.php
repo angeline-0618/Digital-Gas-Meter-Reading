@@ -1,22 +1,3 @@
-<?php
-session_start();
-
-	include("connection.php");
-	include("functions.php");
-
-	$user_data = check_login($con);
-
-	if(!empty($user_data))
-	{
-		$user = $user_data['user_name'];
-		
-	}else
-	{
-		$user = "User";
-	}
-
-?>
-
 <!doctype html>
 <html>
 <head>
@@ -42,15 +23,19 @@ session_start();
 				<a href="logout.php">Logout</a>	
 			</div>
 		</div>
-		<a class="active" href="index.php">Home</a>
+		<a href="index.php">Home</a>
 	</div>
 	
-	<a href="logout.php">Logout</a>
-	<p>Hello, <?php echo $user; ?></p>
+	<h1>Admin</h1>
+
+    <a href="customer_list.php">Customer Details</a>
+    <br>
+    <a>Payment Status</a>
+    <br>
+    <a>Outage Alert</a>
 </body>
-	
+
 <footer>
-	<!-- Footer Bar -->
 	<div class="footerbar">
 		<a href="https://www.petroleumsarawak.com/e">Petros Official Website</a>
 		<a href="feedback.html">Feedback</a>
